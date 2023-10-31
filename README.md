@@ -8,7 +8,7 @@ This is a small practice to understand the new Webgpu API. I am not a Graphics E
 
 Download the repo and do `npm i` and then `npm start` to see this:
 
-![Screenshot 2023-10-31 at 21.50.36.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b343dac1-1d9c-4370-9f82-d38789d3f4c4/d5e7f11d-e616-4d36-be18-3c6ec280ee4e/Screenshot_2023-10-31_at_21.50.36.png)
+![Screenshot 2023-10-31 at 21.50.36.png](./assets/basic-render.png)
 
 ## Usage
 
@@ -57,7 +57,7 @@ import { Renderer } from "components/Renderer";
 import { WGPU } from "components/WGPU";
 import { PerspectiveCamera } from "components/Camera";
 import { Scene } from "components/Scene";
-**import { Sphere } from "components/Geometry";**
+import { Sphere } from "components/Geometry";
 
 global.gpu = new WGPU();
 
@@ -69,8 +69,8 @@ const createApp = async () => {
 
   const scene = new Scene();
   gpu.camera = camera;
-  **const sphere = new Sphere(1, 32, 32);
-  scene.add(sphere);**
+  const sphere = new Sphere(1, 32, 32);
+  scene.add(sphere);
 
   const draw = () => {
     renderer.render(camera, scene);
@@ -95,7 +95,7 @@ import { Renderer } from "components/Renderer";
 import { WGPU } from "components/WGPU";
 import { PerspectiveCamera } from "components/Camera";
 import { Scene } from "components/Scene";
-**import { Sphere } from "components/Geometry";**
+import { Sphere } from "components/Geometry";
 
 global.gpu = new WGPU();
 
@@ -107,11 +107,11 @@ const createApp = async () => {
 
   const scene = new Scene();
   gpu.camera = camera;
-  **const sphere = new Sphere(1, 32, 32);
-  scene.add(sphere);**
+  const sphere = new Sphere(1, 32, 32);
+  scene.add(sphere);
 
   const draw = () => {
-		sphere.rotation.x += 0.01;
+    sphere.rotation.x += 0.01;
     renderer.render(camera, scene);
     requestAnimationFrame(draw);
   };
@@ -129,4 +129,4 @@ const createApp = async () => {
 
 If everything goes well, you should see this:
 
-![Screenshot 2023-10-31 at 21.50.36.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b343dac1-1d9c-4370-9f82-d38789d3f4c4/d5e7f11d-e616-4d36-be18-3c6ec280ee4e/Screenshot_2023-10-31_at_21.50.36.png)
+![Screenshot 2023-10-31 at 21.50.36.png](./assets/basic-render.png)
