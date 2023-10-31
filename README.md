@@ -1,6 +1,5 @@
 # Webgpu Renderer
 
----
 
 This is a small practice to understand the new Webgpu API. I am not a Graphics Engineer, so probably a lot of mistakes were made but you are more than welcome to collaborate.
 
